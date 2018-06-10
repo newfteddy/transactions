@@ -1,0 +1,201 @@
+body {
+    background-image: url("../../static/media/back.png");
+    background-size: 100%;
+    color: #EFEFEF;
+
+    overflow: hidden;
+    font-family:verdana;
+    margin: 0;
+
+    --main-bg-color: #202020;
+    --main-elem-color: #E83D74;
+    --main-text-color: #EFEFEF;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+tr {
+    margin: 0;
+    padding: 0;
+}
+
+td {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+	float: left;
+	height: 50px;
+	width: 100%;
+	text-align: left;
+    background-color: var(--main-bg-color);
+    padding: 0px;
+    font-size: 20pt;
+
+}
+
+.footer{
+    position: absolute;
+    height: 50px;
+	width: 100%;
+	bottom: 0;
+	left:0;
+	background-color: var(--main-bg-color);
+    font-size: 12pt;
+
+}
+
+
+.name {
+	width: 80%;
+	height: 100%;
+	vertical-align: center;
+	padding-left: 20px;
+
+    /*border: 1px solid white;*/
+}
+
+.custom-file-upload {
+	background-color: #202020;
+	height: 40px;
+	width: 100%;
+	margin-top: 15px;
+	border: 0px;
+	border-radius: 0px;
+
+	font-size: 12pt;
+	color: #EFEFEF;
+	cursor: pointer;
+
+	-webkit-transition: background-color 0.5s ease-out;
+  	-moz-transition: background-color 0.5s ease-out;
+  	-o-transition: background-color 0.5s ease-out;
+  	transition: background-color 0.5s ease-out;
+}
+
+.custom-file-upload:hover {
+	background-color: #E83D74;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.manual {
+	height: 100%;
+	text-align: center;
+    font-size: 14pt;
+	vertical-align: center;
+	color: #E83D74;
+	/*border: 1px solid white;*/
+
+	background-color: var(--main-bg-color);
+	-webkit-transition: background-color 0.5s ease-out;
+  	-moz-transition: background-color 0.5s ease-out;
+  	-o-transition: background-color 0.5s ease-out;
+  	transition: background-color 0.5s ease-out;
+}
+
+.manual:hover {
+	color: white;
+	background-color: #E83D74;
+	cursor: pointer;
+}
+
+a {
+	-webkit-transition: background-color 0.5s ease-out;
+  	-moz-transition: background-color 0.5s ease-out;
+  	-o-transition: background-color 0.5s ease-out;
+  	transition: background-color 0.5s ease-out;
+    text-decoration: none;
+}
+
+.manual a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 50px;
+}
+
+.manual a:link{
+    color: #E83D74;
+}
+
+.manual a:visited{
+    color: #E83D74;
+}
+
+.manual a:hover{
+    color:white;
+}
+
+a:active{
+    color: white;
+}
+
+.select_block{
+  position: relative;
+  height: 40%;
+  padding: 0px 10px;
+  width: 26%;
+}
+
+.submit_button {
+	background-color: #202020;
+	height: 40px;
+	width: 100%;
+	margin-top: 15px;
+	border: 0px;
+	border-radius: 0px;
+
+	font-size: 12pt;
+	color: #EFEFEF;
+	cursor: pointer;
+
+	-webkit-transition: background-color 0.5s ease-out;
+  	-moz-transition: background-color 0.5s ease-out;
+  	-o-transition: background-color 0.5s ease-out;
+  	transition: background-color 0.5s ease-out;
+}
+
+.submit_button:hover {
+	background-color: #E83D74;
+}
+
+.content-table {
+  border-spacing: 0px;
+  border-collapse: collapse;
+  margin-top: 50px;
+  margin-left:50px;
+  height: 100%;
+  width: 100%;
+}
+
+
+
+.pie_chart{
+  margin-left:60px;
+  margin-top: 50px;
+  height: 100%;
+  width: 100%;
+}
+
+.donut_chart{
+  margin-left:60px;
+  height: 100%;
+  width: 100%;
+  border: 1px var(--main-bg-color);
+}
+
+.bar_chart{
+  margin-left:0px;
+  height: 100%;
+  width: 100%;
+}
+
+
+
+

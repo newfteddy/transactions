@@ -1,0 +1,84 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/nodejs', '/usr/bin/npm', 'install', 'chosen-js' ]
+2 info using npm@3.5.2
+3 info using node@v4.2.6
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly fetchPackageMetaData chosen-js
+8 silly fetchNamedPackageData chosen-js
+9 silly mapToRegistry name chosen-js
+10 silly mapToRegistry using default registry
+11 silly mapToRegistry registry https://registry.npmjs.org/
+12 silly mapToRegistry uri https://registry.npmjs.org/chosen-js
+13 verbose request uri https://registry.npmjs.org/chosen-js
+14 verbose request no auth needed
+15 info attempt registry request try #1 at 4:16:09 PM
+16 verbose request id 303700b54a56983b
+17 verbose etag "5ace6caa-4996"
+18 verbose lastModified Wed, 11 Apr 2018 20:14:34 GMT
+19 http request GET https://registry.npmjs.org/chosen-js
+20 http 304 https://registry.npmjs.org/chosen-js
+21 verbose headers { date: 'Sat, 19 May 2018 13:16:09 GMT',
+21 verbose headers   via: '1.1 varnish',
+21 verbose headers   'cache-control': 'max-age=300',
+21 verbose headers   etag: '"5ace6caa-4996"',
+21 verbose headers   age: '262',
+21 verbose headers   connection: 'keep-alive',
+21 verbose headers   'x-served-by': 'cache-bma7028-BMA',
+21 verbose headers   'x-cache': 'HIT',
+21 verbose headers   'x-cache-hits': '1',
+21 verbose headers   'x-timer': 'S1526735769.460291,VS0,VE1',
+21 verbose headers   vary: 'Accept-Encoding, Accept' }
+22 silly get cb [ 304,
+22 silly get   { date: 'Sat, 19 May 2018 13:16:09 GMT',
+22 silly get     via: '1.1 varnish',
+22 silly get     'cache-control': 'max-age=300',
+22 silly get     etag: '"5ace6caa-4996"',
+22 silly get     age: '262',
+22 silly get     connection: 'keep-alive',
+22 silly get     'x-served-by': 'cache-bma7028-BMA',
+22 silly get     'x-cache': 'HIT',
+22 silly get     'x-cache-hits': '1',
+22 silly get     'x-timer': 'S1526735769.460291,VS0,VE1',
+22 silly get     vary: 'Accept-Encoding, Accept' } ]
+23 verbose etag https://registry.npmjs.org/chosen-js from cache
+24 verbose get saving chosen-js to /home/konstantin/.npm/registry.npmjs.org/chosen-js/.cache.json
+25 silly install normalizeTree
+26 silly loadCurrentTree Finishing
+27 silly loadIdealTree Starting
+28 silly install loadIdealTree
+29 silly cloneCurrentTree Starting
+30 silly install cloneCurrentTreeToIdealTree
+31 silly cloneCurrentTree Finishing
+32 silly loadShrinkwrap Starting
+33 silly install loadShrinkwrap
+34 silly loadShrinkwrap Finishing
+35 silly loadAllDepsIntoIdealTree Starting
+36 silly install loadAllDepsIntoIdealTree
+37 silly rollbackFailedOptional Starting
+38 silly rollbackFailedOptional Finishing
+39 silly runTopLevelLifecycles Starting
+40 silly runTopLevelLifecycles Finishing
+41 silly install printInstalled
+42 verbose stack Error: Refusing to install chosen-js as a dependency of itself
+42 verbose stack     at checkSelf (/usr/share/npm/lib/install/validate-args.js:40:14)
+42 verbose stack     at Array.<anonymous> (/usr/share/npm/node_modules/slide/lib/bind-actor.js:15:8)
+42 verbose stack     at LOOP (/usr/share/npm/node_modules/slide/lib/chain.js:15:14)
+42 verbose stack     at chain (/usr/share/npm/node_modules/slide/lib/chain.js:20:5)
+42 verbose stack     at /usr/share/npm/lib/install/validate-args.js:15:5
+42 verbose stack     at /usr/share/npm/node_modules/slide/lib/async-map.js:52:35
+42 verbose stack     at Array.forEach (native)
+42 verbose stack     at /usr/share/npm/node_modules/slide/lib/async-map.js:52:11
+42 verbose stack     at Array.forEach (native)
+42 verbose stack     at asyncMap (/usr/share/npm/node_modules/slide/lib/async-map.js:51:8)
+43 verbose cwd /home/konstantin/Desktop/html/aircrafts_monitoring_system/html/add/chosen_v1.8.5
+44 error Linux 4.13.0-41-generic
+45 error argv "/usr/bin/nodejs" "/usr/bin/npm" "install" "chosen-js"
+46 error node v4.2.6
+47 error npm  v3.5.2
+48 error code ENOSELF
+49 error Refusing to install chosen-js as a dependency of itself
+50 error If you need help, you may report this error at:
+50 error     <https://github.com/npm/npm/issues>
+51 verbose exit [ 1, true ]

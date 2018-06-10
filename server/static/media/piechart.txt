@@ -1,0 +1,5 @@
+Work 8
+Eat 8
+Train 12
+Run 5
+Sleep 9

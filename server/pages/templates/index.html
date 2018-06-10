@@ -1,0 +1,291 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    {% load staticfiles %}
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>AMS</title>
+
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+	<link href="https://fonts.googleapis.com/css?family=Tajawal" rel="stylesheet">
+
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="{% static 'css/chosen.css' %}">
+    <link href="{% static 'add/air-datepicker/dist/css/datepicker.css' %}" rel="stylesheet" type="text/css">
+
+    <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+    <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+
+    <script src="{% static 'js/chosen.jquery.js' %}"></script>
+
+    <script src="{% static 'add/air-datepicker/dist/js/datepicker.min.js' %}"></script>
+    <script src="{% static 'add/air-datepicker/dist/js/i18n/datepicker.en.js' %}"></script>
+
+    <script src="//cdn.jsdelivr.net/jquery.color-animation/1/mainfile"></script>
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+	</head>
+
+
+<body >
+
+<script>
+
+	function getParams() {
+		var single = document.getElementById('single-choose');
+		var multi = document.getElementById('multi-choose');
+		var date = document.getElementById('date-choose');
+
+		var check = false;
+
+		if (multi.value == ""){
+			$('.chosen-container-multi .chosen-choices ').animate({backgroundColor: '#E83D74'}, 150);
+			$('.chosen-container-multi .chosen-choices ').animate({backgroundColor: '#202020'}, 150);
+			$('.chosen-container-multi .chosen-choices ').animate({backgroundColor: '#E83D74'}, 150);
+			$('.chosen-container-multi .chosen-choices ').animate({backgroundColor: '#202020'}, 150);
+			$('.chosen-container-multi .chosen-choices ').animate({backgroundColor: '#E83D74'}, 150);
+			$('.chosen-container-multi .chosen-choices ').animate({backgroundColor: '#202020'}, 150);
+			check = true;
+		}
+
+		if (date.value == ""){
+			$('#date-choose').animate({backgroundColor: '#E83D74'}, 150);
+			$('#date-choose').animate({backgroundColor: '#202020'}, 150);
+			$('#date-choose').animate({backgroundColor: '#E83D74'}, 150);
+			$('#date-choose').animate({backgroundColor: '#202020'}, 150);
+			$('#date-choose').animate({backgroundColor: '#E83D74'}, 150);
+			$('#date-choose').animate({backgroundColor: '#202020'}, 150);
+			check = true;
+		}
+
+		return check;
+
+	}
+</script>
+
+<script>
+$(function() {
+    $("#submit_form").submit(function(event) {
+        event.preventDefault();
+        var friendForm = $(this);
+
+        // var posting = $.post(friendForm.success(function(){alert('aa')}));
+        var posting = $.post( friendForm.attr('action'), friendForm.serialize() );
+
+        $.ajax({
+        type: 'POST',
+        success: function(){
+            if(getParams() === false){
+                   document.getElementById('submit_form').submit();
+            }
+            if(getParams() === true){
+                //display the errors
+            }
+        }
+     });
+    });
+});
+
+</script>
+
+
+
+<!--<script type="text/javascript">-->
+      <!--google.charts.load("current", {packages:["corechart"]});-->
+      <!--google.charts.setOnLoadCallback(drawChart);-->
+      <!--function drawChart() {-->
+        <!--var data = google.visualization.arrayToDataTable([-->
+          <!--['Sex', 'Probability'],-->
+          <!--['Male',     11],-->
+          <!--['Female',      8],-->
+        <!--]);-->
+
+        <!--var options = {-->
+          <!--title: 'Sex probability',-->
+          <!--pieHole: 0.4,-->
+          <!--'width':400, 'height':250-->
+        <!--};-->
+
+
+        <!--var chart = new google.visualization.PieChart(document.getElementById('donutchart'));-->
+        <!--chart.draw(data, options);-->
+      <!--}-->
+<!--</script>-->
+
+<script src="https://www.google.com/jsapi"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script type="text/javascript">
+  google.charts.load("current", {packages:["corechart"]});
+  google.charts.setOnLoadCallback(drawChart);
+
+  function drawChart () {
+      $.ajax({
+          url: '../../static/media/piechart.txt',
+          type: 'get',
+          success: function (txt) {
+              var dataArray = [['Name', 'Date']];
+              var txtArray = txt.split('\n');
+              for (var i = 0; i < txtArray.length; i++) {
+                  var tmpData = txtArray[i].split(/\s+/);
+                  dataArray.push([tmpData[0], parseInt(tmpData[1])]);
+              }
+              var data = google.visualization.arrayToDataTable(dataArray);
+              var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+              var options = {'title':'Top topics', 'width':800, 'height':250};
+              chart.draw(data, options);
+
+          }
+      });
+  }
+
+  google.load('visualization', '1', {packages:['corechart'], callback: drawChart});
+</script>
+
+
+<script type="text/javascript">
+  google.charts.load("current", {packages:["corechart"]});
+  google.charts.setOnLoadCallback(drawChart);
+
+  function drawChart () {
+      $.ajax({
+          url: '../../static/media/donutchart.txt',
+          type: 'get',
+          success: function (txt) {
+              var dataArray = [['Name', 'Date']];
+              var txtArray = txt.split('\n');
+              for (var i = 0; i < txtArray.length; i++) {
+                  var tmpData = txtArray[i].split(/\s+/);
+                  dataArray.push([tmpData[0], parseInt(tmpData[1])]);
+              }
+              var data = google.visualization.arrayToDataTable(dataArray);
+              var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+              var options = {
+                  title: 'Sex probability',
+                  pieHole: 0.4,
+                  'width':400, 'height':250
+              };
+              chart.draw(data, options);
+
+          }
+      });
+  }
+
+  google.load('visualization', '1', {packages:['corechart'], callback: drawChart});
+</script>
+
+<script type="text/javascript">
+  google.charts.load("current", {packages:["corechart"]});
+  google.charts.setOnLoadCallback(drawChart);
+
+  function drawChart () {
+      $.ajax({
+          url: '../../static/media/barchart.txt',
+          type: 'get',
+          success: function (txt) {
+              var dataArray = [['Name', 'Date']];
+              var txtArray = txt.split('\n');
+              for (var i = 0; i < txtArray.length; i++) {
+                  var tmpData = txtArray[i].split(/\s+/);
+                  dataArray.push([tmpData[0], parseInt(tmpData[1])]);
+              }
+              var data = google.visualization.arrayToDataTable(dataArray);
+              var chart = new google.visualization.PieChart(document.getElementById('container'));
+              var options = {
+                  title: 'Age probability',
+                  isStacked:true,
+                  'width':400, 'height':250
+               };
+
+               chart.draw(data, options);
+
+          }
+      });
+  }
+
+  google.load('visualization', '1', {packages:['corechart'], callback: drawChart});
+</script>
+
+
+
+<!--<script language="JavaScript">-->
+   <!--google.charts.load("current", {packages:["corechart"]});-->
+  <!--google.charts.setOnLoadCallback(drawChart);-->
+
+    <!--function drawChart() {-->
+        <!--// Define the chart to be drawn.-->
+        <!--var data = google.visualization.arrayToDataTable([-->
+            <!--['Page Vist', ''],-->
+            <!--['0-16', 10000],-->
+            <!--['16-25', 23000],-->
+            <!--['25-45', 46000],-->
+            <!--['>45', 100000]-->
+            <!--]);-->
+        <!--var options = {-->
+            <!--title: 'Age probability',-->
+            <!--isStacked:true,-->
+            <!--'width':400, 'height':250-->
+
+        <!--};-->
+        <!--// Instantiate and draw the chart.-->
+        <!--var chart = new google.visualization.BarChart(document.getElementById('container'));-->
+        <!--chart.draw(data, options);-->
+    <!--}-->
+    <!--google.charts.setOnLoadCallback(drawChart);-->
+<!--</script>-->
+
+
+
+<div class="header">
+	<table cellpadding="0" style="width: 100%;	height: 100%;">
+		<tr>
+			<td class="name" style="margin: 10px 0px; border: ">   Transactions topic modeling </td>
+		</tr>
+	</table>
+</div>
+
+<div class="footer">
+    <table cellpadding="0" style="width: 100%;	height: 100%;">
+
+        <tr>
+            <td class="name" style="margin: 10px 0px; ">  <i> Daniil Feldman, Philipp Nikitin 2018 </i></td>
+            <td class="manual"> <a href="https://github.com/kgavrilchik/AMS">GitHub</a></td>
+        </tr>
+    </table>
+</div>
+
+
+
+<table >
+    <tr>
+        <td class="select_block" rowspan="2">
+            <div style="margin-bottom: 20px">
+                <form method="POST" id="submit_form">
+                    <label for="file-upload" class="custom-file-upload">
+                        Upload file
+                    </label>
+                    <input id="file-upload" type="file" class="custom-file-upload">
+
+                    <!--<input type="file" name="f" class="submit_button">-->
+                    <input type="submit" value="Submit" class="submit_button">
+                </form>
+            </div>
+        </td>
+
+        <td colspan="2">
+             <div class = "pie_chart" id="piechart"></div>
+        </td>
+    </tr>
+    <tr  >
+        <td >
+            <div class = "donut_chart" id="donutchart"  ></div>
+        </td>
+        <td>
+            <div class="bar_chart" id="container"  ></div>
+        </td>></div>
+        </td>
+    </tr>
+</table>
+
+
+</body>
+</html>
