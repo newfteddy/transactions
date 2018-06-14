@@ -1,8 +1,5 @@
 from django.shortcuts import render
 from django.views.generic import TemplateView
-import sys
-sys.path.append('../backend/plots/')
-from plot import plot_show
 from django.http import HttpResponseRedirect
 import os
 
