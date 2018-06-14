@@ -259,11 +259,12 @@ $(function() {
     <tr>
         <td class="select_block" rowspan="2">
             <div style="margin-bottom: 20px">
-                <form method="POST" id="submit_form">
-                    <label for="file-upload" class="custom-file-upload">
+                <form action="{{ request.build_absolute_uri }}upload/" method="POST" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <label for="myfile" class="custom-file-upload">
                         Upload file
                     </label>
-                    <input id="file-upload" type="file" class="custom-file-upload">
+                    <input id="myfile" type="file" name="myfile" class="custom-file-upload">
 
                     <!--<input type="file" name="f" class="submit_button">-->
                     <input type="submit" value="Submit" class="submit_button">

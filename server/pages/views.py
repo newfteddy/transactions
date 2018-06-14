@@ -3,6 +3,8 @@ from django.views.generic import TemplateView
 import sys
 sys.path.append('../backend/plots/')
 from plot import plot_show
+from django.http import HttpResponseRedirect
+import os
 
 
 # Create your views here.
@@ -37,6 +39,27 @@ def insert_text(text):
         index.write(index_str)
 
     index.close()
+
+
+def home(request):
+    return render(request, 'index.html', {'what':'DWT File Upload with Django'})
+
+def upload(request):
+    if request.method == 'POST':
+        handle_uploaded_file(request.FILES['myfile'], str(request.FILES['myfile']))
+        return HttpResponseRedirect('/main/')
+
+    return HttpResponse("Failed")
+
+def handle_uploaded_file(file, filename):
+    if not os.path.exists('upload/'):
+        os.mkdir('upload/')
+
+    with open('upload/' + 'data.csv', 'wb+') as destination:
+        for chunk in file.chunks():
+            destination.write(chunk)
+
+
 
 class HomePageView(TemplateView):
     def get(self, request, **kwargs):
