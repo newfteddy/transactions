@@ -1,4 +1,4 @@
-0-16 4
-16-25 12
-25-45 3
->45 15
+Teenage 0
+Young 6
+Middle_age 42
+Elderly_age 50
