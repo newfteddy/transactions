@@ -11,7 +11,7 @@ To build the portrait of a user we used topic modeling. We presume that user's t
 
 ## File upload format
 
-The file must be in csv format with two columns. The first column is mcc codes, the second one is the amount of transactions. It is necessary that the numbers in the first  column are mcc code.
+The file must be in csv format with two columns. The first column is mcc codes, the second one is the amount of transactions. It is necessary that the numbers in the first  column are mcc code. The minimum number of rows is 10, at least 3 transaction amounts must be nonzero.
 
 ## Generative topic model scheme: ##
 ![Screenshot](schem.png)
