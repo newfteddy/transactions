@@ -1,2 +1,2 @@
-Male 27
-Female 72
+Male 40
+Female 59

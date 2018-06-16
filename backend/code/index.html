@@ -96,8 +96,8 @@ $(function() {
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
           ['Sex', 'Probability'],
-          ['Male',     54],
-          ['Female',      45],
+          ['Male',     male_pobability],
+          ['Female',      female_probability],
         ]);
 
         var options = {
@@ -122,11 +122,11 @@ $(function() {
   function drawChart () {
       var data = google.visualization.arrayToDataTable([
           ['Topic', 'Probability'],
-          ['Party man',     17],
-          ['Cash transfer',     15],
-          ['Money transfers',     13],
-          ['Money transfer',     12],
-          ['Shops and pharmacies',     11],
+          ['topic_1',     topic_p1],
+          ['topic_2',     topic_p2],
+          ['topic_3',     topic_p3],
+          ['topic_4',     topic_p4],
+          ['topic_5',     topic_p5],
         ]);
       var chart = new google.visualization.PieChart(document.getElementById('piechart'));
       var options = {'title':'Top topics', 'width':800, 'height':250};
@@ -235,10 +235,10 @@ $(function() {
         // Define the chart to be drawn.
         var data = google.visualization.arrayToDataTable([
             ['Age', ''],
-            ['Teen age', 0],
-            ['Young age', 26],
-            ['Middle age', 46],
-            ['Elderly age', 26]
+            ['Teen age', teen_age],
+            ['Young age', young_age],
+            ['Middle age', middle_age],
+            ['Elderly age', elderly_age]
             ]);
         var options = {
             title: 'Age probability',

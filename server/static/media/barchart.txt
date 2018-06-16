@@ -1,4 +1,4 @@
 Teenage 0
-Young 7
-Middle age 41
-Elderly age 50
+Young 6
+Middle_age 42
+Elderly_age 50
