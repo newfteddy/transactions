@@ -240,15 +240,26 @@ $(function() {
             ['Middle age', middle_age],
             ['Elderly age', elderly_age]
             ]);
-        var options = {
-            title: 'Age probability',
-            isStacked:true,
-            'width':400, 'height':250
 
-        };
-        // Instantiate and draw the chart.
+        var view = new google.visualization.DataView(data);
+
+        view.setColumns([0,
+        { calc: "stringify",
+        sourceColumn: 1,
+        type: "string",
+        role: "annotation" },
+        1]);
         var chart = new google.visualization.BarChart(document.getElementById('container'));
-        chart.draw(data, options);
+        var options = {
+        title: 'Age probability',
+        isStacked:true,
+        'width':400, 'height':250,
+        legend: { position: "none" }
+        };
+
+
+        // Instantiate and draw the chart.
+        chart.draw(view, options);
     }
     google.charts.setOnLoadCallback(drawChart);
 </script>
