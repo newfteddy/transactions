@@ -1,14 +1,7 @@
-# Aircraft traffic monitoring system
+# Transactions portrait
 
-This service represent a simple site. It was developed for monitoring and predicting the future passengers traffic.
-Received information is designed to help in the solving the logistic problems of air company.
-
-This repo contains the code of ML backend, server and front-end implementation.
-Server was implemented using Django module.
-
-This system is available on the 34.228.36.23
-
-The interface of our project user-friendly and easy to use.
+This service creates a portrait of a person based on ones banking transactions. Having uploaded a file listing transaction you get an overview analysis including:
+$\frac{1}{2}$
 
 ## Technical scheme of realization: ##
 ![Screenshot](scheme.png)
