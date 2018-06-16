@@ -1,15 +1,15 @@
-# Aircraft traffic monitoring system
+# Transactions portrait
 
-This service represent a simple site. It was developed for monitoring and predicting the future passengers traffic.
-Received information is designed to help in the solving the logistic problems of air company.
+This service creates a portrait of a person based on ones banking transactions. Having uploaded a file listing transaction you get an overview analysis including:
+- most popular areas
+- sex probability
+- age probability
 
-This repo contains the code of ML backend, server and front-end implementation.
-Server was implemented using Django module.
+## Analysis mechamizm 
 
-This system is available on the 34.228.36.23
+To build the portrait of a user we used topic modeling. We presume that user's transactions follow a generative model: first a user chooses a topic from the distribution p(t|u) and then a transaction from p(w|t). Here U is the set of users, T stands for the set of topics and W is the set of transactions.
 
-The interface of our project user-friendly and easy to use.
+## Generative topic model scheme: ##
+![Screenshot](schem.png)
 
-## Technical scheme of realization: ##
-![Screenshot](scheme.png)
 
