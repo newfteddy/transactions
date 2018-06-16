@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4be60069-1f32-417c-8a53-5724736446b4" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/backend/data/good_examples/13966156.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/data/good_examples/194213709.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/data/good_examples/194469586.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/data/good_examples/desktop.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/code/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/backend/code/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/pages/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/server/pages/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/serverapp/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/server/serverapp/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/pages/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/server/pages/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -57,8 +53,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/pages/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="65">
-              <caret line="243" selection-start-line="243" selection-end-line="249" selection-end-column="14" />
+            <state relative-caret-position="321">
+              <caret line="303" column="77" lean-forward="true" selection-start-line="303" selection-start-column="77" selection-end-line="303" selection-end-column="77" />
               <folding>
                 <element signature="n#style#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -73,8 +69,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/backend/code/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="48">
-              <caret line="245" column="26" selection-start-line="245" selection-start-column="26" selection-end-line="245" selection-end-column="26" />
+            <state relative-caret-position="338">
+              <caret line="301" column="116" selection-start-line="301" selection-start-column="116" selection-end-line="301" selection-end-column="116" />
               <folding>
                 <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#table#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -87,8 +83,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server/pages/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" column="33" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
+            <state relative-caret-position="255">
+              <caret line="24" column="25" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -111,8 +107,11 @@
       <file leaf-file-name="transform.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/backend/code/transform.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="11" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
+            <state relative-caret-position="168">
+              <caret line="49" column="46" lean-forward="true" selection-start-line="49" selection-start-column="21" selection-end-line="49" selection-end-column="46" />
+              <folding>
+                <element signature="e#1#10#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -157,10 +156,10 @@
         <option value="$PROJECT_DIR$/server/test.py" />
         <option value="$PROJECT_DIR$/backend/code/index_tmp.html" />
         <option value="$PROJECT_DIR$/backend/code/transform.py" />
-        <option value="$PROJECT_DIR$/server/pages/views.py" />
         <option value="$PROJECT_DIR$/server/manage.py" />
         <option value="$PROJECT_DIR$/server/serverapp/settings.py" />
         <option value="$PROJECT_DIR$/server/pages/templates/index.html" />
+        <option value="$PROJECT_DIR$/server/pages/views.py" />
         <option value="$PROJECT_DIR$/backend/code/index.html" />
       </list>
     </option>
@@ -204,12 +203,25 @@
               <item name="transactions" type="b2602c69:ProjectViewProjectNode" />
               <item name="transactions" type="462c0819:PsiDirectoryNode" />
               <item name="backend" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
+              <item name="code" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="transactions" type="b2602c69:ProjectViewProjectNode" />
               <item name="transactions" type="462c0819:PsiDirectoryNode" />
               <item name="server" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="transactions" type="b2602c69:ProjectViewProjectNode" />
+              <item name="transactions" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="transactions" type="b2602c69:ProjectViewProjectNode" />
+              <item name="transactions" type="462c0819:PsiDirectoryNode" />
+              <item name="server" type="462c0819:PsiDirectoryNode" />
+              <item name="pages" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -349,22 +361,30 @@
       <option name="project" value="LOCAL" />
       <updated>1529149199380</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="phill: server settings and add data example">
+      <created>1529154482594</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1529154482594</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="-6" width="1549" height="837" extended-state="6" />
+    <frame x="-6" y="-6" width="1549" height="837" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="15" />
-      <window_info anchor="bottom" id="Event Log" order="18" sideWeight="0.5003253" side_tool="true" visible="true" weight="0.3292011" />
+      <window_info anchor="bottom" id="Event Log" order="18" sideWeight="0.5003253" side_tool="true" weight="0.3292011" />
       <window_info anchor="bottom" id="Database Changes" order="2" show_stripe_button="false" />
       <window_info anchor="bottom" id="File Transfer" order="1" weight="0.3292011" />
       <window_info anchor="bottom" id="Run" order="7" weight="0.27134988" />
-      <window_info anchor="bottom" id="Version Control" order="16" sideWeight="0.49967468" visible="true" weight="0.3292011" />
+      <window_info anchor="bottom" id="Version Control" order="16" sideWeight="0.49967468" weight="0.3292011" />
       <window_info anchor="bottom" id="Python Console" order="19" />
       <window_info anchor="bottom" id="Terminal" order="17" />
       <window_info anchor="right" id="Remote Host" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.110605076" />
+      <window_info content_ui="combo" id="Project" order="1" weight="0.110605076" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="1" />
       <window_info anchor="right" id="SciView" order="0" />
@@ -382,27 +402,27 @@
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Run" order="5" visible="true" weight="0.27139038" />
-      <window_info anchor="right" id="Remote Host" order="2" />
+      <window_info anchor="bottom" id="Version Control" order="10" sideWeight="0.49967468" weight="0.3292011" />
       <window_info anchor="right" id="Ant Build" order="4" weight="0.25" />
+      <window_info anchor="right" id="Remote Host" order="2" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.110605076" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="3" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="File Transfer" order="1" weight="0.3292011" />
+      <window_info anchor="bottom" id="Database Changes" order="2" show_stripe_button="false" />
       <window_info anchor="bottom" id="TODO" order="9" />
-      <window_info anchor="bottom" id="Version Control" order="10" />
-      <window_info anchor="bottom" id="Python Console" order="13" />
-      <window_info anchor="bottom" id="Cvs" order="7" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="8" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="5" weight="0.27134988" />
       <window_info anchor="bottom" id="Find" order="4" weight="0.3292011" />
+      <window_info anchor="bottom" id="Cvs" order="7" weight="0.25" />
+      <window_info anchor="bottom" id="Debug" order="6" weight="0.4" />
       <window_info anchor="right" id="Database" order="1" />
       <window_info anchor="bottom" id="Terminal" order="11" />
-      <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
-      <window_info anchor="bottom" id="Database Changes" order="2" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.5003253" side_tool="true" weight="0.3292011" />
+      <window_info anchor="bottom" id="Inspection" order="8" weight="0.4" />
       <window_info anchor="right" id="SciView" order="0" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="3" />
-      <window_info anchor="bottom" id="Debug" order="6" weight="0.4" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24609375" />
+      <window_info anchor="bottom" id="Python Console" order="13" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -418,7 +438,8 @@
     <MESSAGE value="phill: deleted some shit" />
     <MESSAGE value="phill: add back part" />
     <MESSAGE value="phill: server settings and documentation" />
-    <option name="LAST_COMMIT_MESSAGE" value="phill: server settings and documentation" />
+    <MESSAGE value="phill: server settings and add data example" />
+    <option name="LAST_COMMIT_MESSAGE" value="phill: server settings and add data example" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/server/pages/templates/piechart.txt">
@@ -478,6 +499,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+          <folding>
+            <element signature="e#1#10#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -725,16 +749,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server/pages/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="33" selection-start-line="24" selection-start-column="33" selection-end-line="24" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -745,13 +759,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backend/code/transform.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="11" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/serverapp/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -759,10 +766,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/backend/code/transform.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="49" column="46" lean-forward="true" selection-start-line="49" selection-start-column="21" selection-end-line="49" selection-end-column="46" />
+          <folding>
+            <element signature="e#1#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/server/pages/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="65">
-          <caret line="243" selection-start-line="243" selection-end-line="249" selection-end-column="14" />
+        <state relative-caret-position="321">
+          <caret line="303" column="77" lean-forward="true" selection-start-line="303" selection-start-column="77" selection-end-line="303" selection-end-column="77" />
           <folding>
             <element signature="n#style#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -773,10 +790,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/server/pages/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="24" column="25" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/backend/code/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="245" column="26" selection-start-line="245" selection-start-column="26" selection-end-line="245" selection-end-column="26" />
+        <state relative-caret-position="338">
+          <caret line="301" column="116" selection-start-line="301" selection-start-column="116" selection-end-line="301" selection-end-column="116" />
           <folding>
             <element signature="n#style#0;n#td#0;n#tr#0;n#table#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#table#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />

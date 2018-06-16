@@ -1,5 +1,7 @@
 import os
 import sys
+import pandas as pd
+import pickle
 sys.path.append('../backend/code')
 
 from transform import change_chart
@@ -19,10 +21,27 @@ def home(request):
 def upload(request):
     if request.method == 'POST':
         handle_uploaded_file(request.FILES['myfile'])
-        change_chart()
-        return HttpResponseRedirect('/main/')
-
+        if check():
+            change_chart()
+            return HttpResponseRedirect('/main/')
+        else:
+            return HttpResponse("Bad input file")
     return HttpResponse("Failed")
+
+
+def check():
+    df = pd.read_csv('../backend/tmp/data.csv')
+    if len(df.columns) != 2:
+        return False
+    if df.shape[0] < 10:
+        return False
+    if df[df[df.columns[1]] != 0].shape[0] < 3:
+        return False
+    codes = pickle.load(open('./pages/mcc.pkl', 'rb'))
+    for x in df[df.columns[0]]:
+        if x not in codes:
+            return False
+    return True
 
 
 def handle_uploaded_file(file):
@@ -32,6 +51,8 @@ def handle_uploaded_file(file):
     with open('../backend/tmp/' + 'data.csv', 'wb+') as destination:
         for chunk in file.chunks():
             destination.write(chunk)
+    return destination
+
 
 
 class HomePageView(TemplateView):

@@ -96,8 +96,8 @@ $(function() {
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
           ['Sex', 'Probability'],
-          ['Male',     50],
-          ['Female',      49],
+          ['Male',     43],
+          ['Female',      56],
         ]);
 
         var options = {
@@ -122,11 +122,11 @@ $(function() {
   function drawChart () {
       var data = google.visualization.arrayToDataTable([
           ['Topic', 'Probability'],
-          ['Food, alcohol, pharmacy',     35],
-          ['General shop',     25],
-          ['Car owner',     16],
-          ['Shops and pharmacies',     14],
-          ['Internet',     7],
+          ['Unknown operations',     18],
+          ['Unknown',     17],
+          ['Money transfer',     13],
+          ['Traveler',     13],
+          ['Shops',     8],
         ]);
       var chart = new google.visualization.PieChart(document.getElementById('piechart'));
       var options = {'title':'Top topics', 'width':800, 'height':250};
@@ -236,33 +236,39 @@ $(function() {
         var data = google.visualization.arrayToDataTable([
             ['Age', ''],
             ['Teen age', 0],
-            ['Young age', 27],
-            ['Middle age', 53],
-            ['Elderly age', 18]
+            ['Young age', 13],
+            ['Middle age', 46],
+            ['Elderly age', 39]
             ]);
 
-        {#var view = new google.visualization.DataView(data);#}
-        {#view.setColumns([0,1,#}
-        {#    {calc:"stringify",#}
-        {#    sourceColumn: 1,#}
-        {#    type:"string",#}
-        {#    rolle: "annotation"},#}
-        {#2]);#}
-        var options = {
-            title: 'Age probability',
-            isStacked:true,
-            'width':400, 'height':250,
-            legend: {position:"none"}
+        var view = new google.visualization.DataView(data);
 
+        view.setColumns([0,
+        { calc: "stringify",
+        sourceColumn: 1,
+        type: "string",
+        role: "annotation" },
+        1]);
+        var chart = new google.visualization.BarChart(document.getElementById('container'));
+        var options = {
+        title: 'Age probability',
+        isStacked:true,
+        'width':400, 'height':250,
+        legend: { position: "none" }
         };
+
+
         // Instantiate and draw the chart.
-        var chart = new google.visualization.BarChart(document.getElementById('barchart_values'));
         chart.draw(view, options);
     }
     google.charts.setOnLoadCallback(drawChart);
 </script>
 
-
+<script>
+function validation() {
+    document.getElementById("myfile").required = true;
+}
+</script>
 
 <div class="header">
 	<table cellpadding="0" style="width: 100%;	height: 100%;">
@@ -293,10 +299,10 @@ $(function() {
                     <label for="myfile" class="custom-file-upload">
                         Upload file
                     </label>
-                    <input id="myfile" type="file" name="myfile" class="custom-file-upload">
+                    <input id="myfile" type="file" name="myfile" class="custom-file-upload" accept = ".csv">
 
                     <!--<input type="file" name="f" class="submit_button">-->
-                    <input type="submit" value="Submit" class="submit_button">
+                    <input type="submit" value="Submit" class="submit_button" onclick = "validation()">
                 </form>
             </div>
         </td>
@@ -310,7 +316,7 @@ $(function() {
             <div class = "donut_chart" id="donutchart"  ></div>
         </td>
         <td>
-            <div class="bar_chart" id="barchart_values"  ></div>
+            <div class="bar_chart" id="container"  ></div>
         </td>></div>
         </td>
     </tr>
