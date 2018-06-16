@@ -2,13 +2,14 @@
 <module type="PYTHON_MODULE" version="4">
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$" />
-    <orderEntry type="jdk" jdkName="Remote Python 3.6.3 (sftp://phillnik@93.175.29.159:22/home/phillnik/miniconda3/bin/python)" jdkType="Python SDK" />
+    <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
   <component name="TemplatesService">
+    <option name="TEMPLATE_CONFIGURATION" value="Jinja2" />
     <option name="TEMPLATE_FOLDERS">
       <list>
-        <option value="$MODULE_DIR$/venv/lib/python3.5/site-packages/django/forms/templates" />
+        <option value="$MODULE_DIR$/server/pages/templates" />
       </list>
     </option>
   </component>

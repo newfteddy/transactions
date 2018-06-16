@@ -1,14 +1,20 @@
-import sys
 import os
 import pickle
 import numpy as np
 import pandas as pd
-#sys.path.append('../backend/bigartm/python')
 import artm
 
 from glob import glob
 
+
 def get_data(df):
+    """
+    The function implements converting DataFrame with information about MCC-codes and costs of the client
+     to his profile. The profile include information about behaviour pattern, gender and age.
+
+    :param df: pandas.DataFrame with two columns: first with MCC, second with costs on the MCC.
+    :return: python dict
+    """
     topic2name = pickle.load(open('../backend/data/topic2name.pkl', 'rb'))
     with open('../backend/tmp/1.vw', 'w') as f:
         f.write('0 |@default')
@@ -35,7 +41,12 @@ def get_data(df):
         os.remove(f)
     return {'top_topics': top_topics, 'gender': list(gender), 'age': list(age)}
 
+
 def change_chart():
+    """
+    The function change server/pages/templates/index.html according to upload files with information about client
+    :return:
+    """
     df = pd.read_csv('../backend/tmp/data.csv')
     predict = get_data(df)
     with open('../backend/code/index.html', 'r') as f:
@@ -58,6 +69,10 @@ def change_chart():
 
 
 def init_chart():
+    """
+    The function initialise server/pages/templates/index.html with information about random user.
+    :return:
+    """
     paths = glob('../backend/data/examples/*')
     path = np.random.choice(paths)
     df = pd.read_csv(path)
